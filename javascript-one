@@ -1,0 +1,27 @@
+var questions = [
+  ['Which bill is George Washington on?', 1],
+  ['Which bill is Abraham Lincoln on?', 5],
+  ['Which bill is Benjamin Franklin on?', 100]
+];
+var correct = 0;
+var question;
+var answer;
+var response;
+var html;
+
+function print(message) {
+  document.write(message);
+}
+
+
+for (var i = 0; i < questions.length; i += 1) {
+  question = questions[i][0];
+  answer = questions [i][1];
+  response = parseInt(prompt(question));
+  if (response === answer) {
+    correct += 1;
+}
+}
+
+html = "You got " + correct + " questions(s) right.";
+  print (html);
